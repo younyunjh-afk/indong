@@ -80,12 +80,13 @@ body{font-family:var(--font);background:var(--bg);color:var(--tx);padding:32px 2
 .store-body-inner{padding:8px 16px 10px 44px}
 .store-title{font-size:10px;color:var(--txm);font-weight:600;margin-bottom:6px;letter-spacing:.2px}
 .store-list{display:flex;flex-direction:column;gap:3px}
-.store-item{display:grid;grid-template-columns:18px 1fr 60px 56px 56px;align-items:center;gap:8px;font-size:11px;padding:4px 8px;background:#fff;border:1px solid var(--bd);border-radius:6px}
+.store-item{display:grid;grid-template-columns:18px 1fr 60px 56px 56px 56px;align-items:center;gap:8px;font-size:11px;padding:4px 8px;background:#fff;border:1px solid var(--bd);border-radius:6px}
 .store-rank{font-size:10px;font-weight:700;color:#fff;background:var(--gold);width:16px;height:16px;border-radius:50%;display:flex;align-items:center;justify-content:center}
 .store-rank.r1{background:#c97d0a}.store-rank.r2{background:#b8901f}.store-rank.r3{background:#a39c33}.store-rank.r4{background:#909747}.store-rank.r5{background:#7d9258}
 .store-name{font-weight:500;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .store-code{font-size:9.5px;color:var(--txm)}
 .store-margin{text-align:right;font-weight:700;color:var(--blue)}
+.store-mgr{text-align:right;font-weight:700;color:var(--green)}
 .store-total{text-align:right;font-weight:700;color:var(--gold)}
 
 .legend{display:flex;gap:14px;margin-bottom:14px;font-size:11px;color:var(--txs)}
@@ -201,6 +202,7 @@ function renderChain(brand, dist, c, cid){
       <span class="store-name">${s['매장명']}</span>
       <span class="store-code">${s['코드']}</span>
       <span class="store-margin">${s['유통마진율'].toFixed(1)}%</span>
+      <span class="store-mgr">${s['매니저율'].toFixed(1)}%</span>
       <span class="store-total">${s['합계율'].toFixed(1)}%</span>
     </div>`;
   });
